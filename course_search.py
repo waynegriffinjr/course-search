@@ -16,14 +16,16 @@ sentences = [
 
 print("Loading model...")
 
-# ── Encode knowledge base ───────────────────────────────────────────────────
+
 print(f"Embedding {len(sentences)} sentences...")
+
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
+# Encode sentences saved in the variable model
 embedded_sentences = model.encode(sentences)
 
-
+# Create the CLI loop
 engaged = True
 
 while engaged: 
